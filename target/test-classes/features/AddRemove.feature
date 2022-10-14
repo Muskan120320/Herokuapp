@@ -18,7 +18,6 @@ Feature: Add/Remove Elements
     And user clicks on the <Delete button>
     Then user cannot view <Delete button>
     Examples:
-      | Page Type | Add button | Delete button |
 
 
 
