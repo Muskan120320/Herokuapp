@@ -16,12 +16,14 @@ public class addRemove {
     driver.get(URL);
     }
 
-    @When("^user clicks on the (.*)^")
+    @When("^user clicks on the (.*)$")
     public void userClicksOnTheAddButton() {
         driver.findElement(By.xpath("//button[contains(text(),'Add Element')]")).click();
-    }
-    @Then("user can view <button/2>")
-    public void delete_button() {
-}
 
+    }
+    @Then("^user can view (.*)$")
+    public void delete_button() {
+    driver.findElement(By.xpath("//button[contains(text(),'Delete')]")).click();
+
+     }
 }

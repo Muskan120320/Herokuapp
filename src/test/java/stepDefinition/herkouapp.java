@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,10 +17,14 @@ public class herkouapp {
 
     }
 
-    @When("user clicks on the <Link>")
+    @When("^user clicks on the (.*)$")
     public void userClicksOnTheLink() {
         driver.findElement(By.linkText("https://the-internet.herokuapp.com/add_remove_elements/")).click();
     }
 
 
+    @Then("^user navigates to (.*)$")
+    public void userNavigatesToPage() {
+
+    }
 }

@@ -7,7 +7,7 @@ Feature: Herokuapp Homepage
     Then user navigates to <Page>
     Examples:
       | Page Type            | Link                     | Page                   |
-      |  https://the-internet.herokuapp.com/           | A/B Testing              | A/B Testing            |
+      | Homepage             | A/B Testing              | A/B Testing            |
       | Homepage             | Basic Auth               | Basic Auth             |
       | Homepage             | Checkboxes               | Checkboxes             |
       | Homepage             | Context Menu             | Context Menu           |
@@ -66,12 +66,12 @@ Feature: Herokuapp Homepage
   | Checkboxes            | Checkbox 1           |
 
 
-  @HEHO006 @Regression @Menu
+  @HEHO006 @Regression @contextMenu
 
-  Scenario Outline : Check the functionality of Alert apperance
+  Scenario Outline : Check the functionality of Alert appearance
     Given user navigates to <Page Type> page
     When user right clicks on the <Box>
-    Then user can view the <Alert Message>
+    Then user can view the <Alert>
     Examples:
-      | Page Type    | Box          | Alert Message               |
+      | Page Type    | Box          |  Message               |
       | Context Menu | the-internet | You selected a context menu |
